@@ -205,7 +205,7 @@ def user_stats(df):
     if df['Birth Year'].max() == 0:
         print('No user birth year data available.')
     else:
-        print('Birth Years of Users: Oldest:{}    Youngest:{}    Average:{}'.format(df['Birth Year'].min(),df['Birth Year'].max(), df['Birth Year'].mean()))
+        print('Birth Years of Users: Oldest: {}    Youngest: {}    Average: {}'.format(df['Birth Year'].min(),df['Birth Year'].max(), df['Birth Year'].mean()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
