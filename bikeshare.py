@@ -172,9 +172,9 @@ def station_stats(df):
 
     modes = df.mode().head(1)
     
-    print('Most Common Start Station:', modes['Start Station'][0])
-    print('Most Common End Station:  ', modes['End Station'][0])
-    print('Most Common Trip:         ', modes['StartStop'][0])
+    print('Most Common Trip:          ', modes['StartStop'][0])
+    print('Most Common Start Station: ', modes['Start Station'][0])
+    print('Most Common End Station:   ', modes['End Station'][0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -188,8 +188,8 @@ def trip_duration_stats(df):
 
     total_seconds = df['Trip Duration'].sum()
     average_seconds = total_seconds/len(df)
-    print('Total Travel Time:   {} minutes and {} seconds ({} seconds)'.format(int(total_seconds/60), int(total_seconds%60), int(total_seconds)))
     print('Average Travel Time: {} minutes and {} seconds ({} seconds)'.format(int(average_seconds/60), int(average_seconds%60), int(average_seconds)))
+    print('Total Travel Time:   {} minutes and {} seconds ({} seconds)'.format(int(total_seconds/60), int(total_seconds%60), int(total_seconds)))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -207,7 +207,7 @@ def user_stats(df):
     if df['Birth Year'].max() == 0:
         print('No user birth year data available.')
     else:
-        print('Birth Years of Users: Oldest:{}    Youngest:{}    Average:{}'.format(df['Birth Year'].min(),df['Birth Year'].max(), df['Birth Year'].mean()))
+        print('Birth Years of Users: Oldest: {}    Youngest: {}    Average: {}'.format(df['Birth Year'].min(),df['Birth Year'].max(), df['Birth Year'].mean()))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
