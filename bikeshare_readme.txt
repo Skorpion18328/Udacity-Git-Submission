@@ -23,3 +23,5 @@ And I think that's pretty much it. I'll add more if I use more, but the bulk of 
 https://datagy.io/pandas-iterate-over-rows/ for the use of the .iloc method
 
 Ported my original code into the template at the request of the reviewer; it seems to run the same
+
+Adding a new line to the bikeshare readme to simulate someone else making edits
